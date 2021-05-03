@@ -11,7 +11,6 @@ class Crear_cadenas:
 
 
 
-
     def construir_cadenas(self):
         for i in range(self.tama):
             individuo = Cadena(self.longitud)
@@ -23,9 +22,10 @@ class Crear_cadenas:
     def imprimir_cadenas(self):
         for i in self.lista_cadenas:
             print(i)
+        print(self.lista_cadenas)
 
 
-prueba1 = Crear_cadenas(4,7)
-prueba1.construir_cadenas()
-prueba1.imprimir_cadenas()
+#prueba1 = Crear_cadenas(10,6)
+#prueba1.construir_cadenas()
+#prueba1.imprimir_cadenas()
 

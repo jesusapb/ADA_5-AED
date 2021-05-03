@@ -32,7 +32,7 @@ class Cadena:
 
 
 
-prueba = Cadena(6)
-print(prueba.numero_aleatorio())
-prueba.construir()
-prueba.imprimir_cadena()
+#prueba = Cadena(6)
+#print(prueba.numero_aleatorio())
+#prueba.construir()
+#prueba.imprimir_cadena()

@@ -1,5 +1,9 @@
-class Recorrer_Arbol:
 
+''' Esta clase recorre el arbol para ver donde esta el resultado'''
+
+class Recorrer_Arbol:
+    #Al constructor se le pasa el arbol que va a recorrer y la ruta que seguira,
+    # se regresa la hoja resultante de la ruta
     def __init__(self,arbol,ruta):
         self.arbol = arbol
         #self.cadena = cadena
@@ -10,18 +14,18 @@ class Recorrer_Arbol:
     def hacer_recorrido(self):
         #ruta = []
         ubicacion = self.arbol[0][0]
-        print(ubicacion)
-        print(len(self.arbol))
-        print("busqueda en el arbol")
+        #print(ubicacion)
+        #print(len(self.arbol))
+        #print("busqueda en el arbol")
         j = 1
         for i in self.ruta:
             if i ==0:
-                print("cero")
+                #print("cero")
                 pivote = ubicacion[1]
-                print(pivote)
+                #print(pivote)
                 ubicacion = self.arbol[j][pivote]
             else:
-                print("uno")
+                #print("uno")
                 pivote = ubicacion[2]
                 ubicacion = self.arbol[j][pivote]
 
@@ -30,7 +34,7 @@ class Recorrer_Arbol:
         self.resultado = ubicacion
 
 
-
+    # Metodo para pruebas locales, No USAR en programa global
     def imprimir_arbol(self):
         print("Resultado: ")
         print(self.resultado)

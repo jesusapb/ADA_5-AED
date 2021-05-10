@@ -1,11 +1,12 @@
 from Crear_arbol import *
-from Crear_cadena import *
+from Crear_rutas import *
 from Hacer_recorridos import *
 from Probabilidades import *
 
-class Tablero_galuar:
+class Tablero_Galton:
 
-
+    #se pasa al constructor atraves de "tama" el numero de pelotas
+    # que caeran y el numero de niveles que tiene el tablero
     def __init__(self,tama,niveles = 7):
         self.tama = tama
         self.niveles = niveles
@@ -15,8 +16,7 @@ class Tablero_galuar:
         self.resultados_probabilidades = []
 
 
-
-
+    # En este metodo se crea el arbol y se construyen las rutas
     def construir_tablero_rutas(self):
         #ARBOL
         crear = Crear_arbol(self.niveles)
@@ -24,9 +24,9 @@ class Tablero_galuar:
         self.arbol = crear.lista_arbol
         #crear.imprimir_arbol()
         #RUTAS
-        crear_rutas = Crear_cadenas(self.tama,self.niveles-1)
-        crear_rutas.construir_cadenas()
-        self.rutas = crear_rutas.lista_cadenas
+        construir_rutas = Crear_rutas(self.tama,self.niveles-1)
+        construir_rutas.construir_rutas()
+        self.rutas = construir_rutas.lista_rutas
 
 
 
@@ -39,18 +39,19 @@ class Tablero_galuar:
 
     def sacar_probabilidades(self):
         proba = Probabilidades(self.resultados_recorridos,self.niveles)
-        proba.sacar_probabilidades()
+        #Aqui se hace el ajusta para sacar las probabilidades en decimales o acululados
+        #proba.sacar_probabilidades()
+        proba.sacar_probabilidades_2()
         self.resultados_probabilidades = proba.resultados
-        pass
-
 
 
 
     def imprimir_resultados(self):
+        print("Tablero de Galton")
         print("Arbol: ",self.arbol)
         print("Rutas: ",self.rutas)
-        print("resultados: ",self.resultados_recorridos)
-        print(self.resultados_probabilidades)
+        print("Resultados de las rutas: ",self.resultados_recorridos)
+        print("Probabilidades: ",self.resultados_probabilidades)
 
 
 #prueba_10 = Tablero_galuar(100)

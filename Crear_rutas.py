@@ -23,9 +23,3 @@ class Crear_rutas:
         for i in self.lista_rutas:
             print(i)
         print(self.lista_rutas)
-
-
-#prueba1 = Crear_cadenas(10,6)
-#prueba1.construir_cadenas()
-#prueba1.imprimir_cadenas()
-

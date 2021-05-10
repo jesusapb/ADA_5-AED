@@ -25,26 +25,15 @@ class Probabilidades:
 
         for i in range(1,self.tama+1):
             self.resultados.append(self.lista_probabilidades.count(i))
-        #
-        #print("resultados:", self.resultados)
+
         divisor = len(self.listas_listas) # se divide entre el numero de elementos que tiene la lista
-        #my_list = list(map(lambda x: x / divisor, my_list))
         self.resultados = list(map(lambda x: x / divisor, self.resultados))
-        #https: // es.stackoverflow.com / questions / 374572 / c % C3 % B3mo - puedo - dividir - una - lista - con - un - numero - en - python
 
 
     # Metodo para pruebas locales, NO USAR en el programa global
     def imprimir_resultados(self):
         print(self.lista_probabilidades)
         print(self.resultados)
-
-
-
-#lista_lis = [[4, 3, 4], [3, 2, 3], [5, 4, 5], [4, 3, 4], [4, 3, 4], [5, 4, 5], [4, 3, 4], [3, 2, 3], [4, 3, 4], [6, 5, 6]]
-#prueba_8 = Probabilidades(lista_lis,7)
-#prueba_8.sacar_probabilidades()
-#prueba_8.imprimir_resultados()
-
 
 
 

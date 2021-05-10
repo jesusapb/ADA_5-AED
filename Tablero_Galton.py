@@ -22,12 +22,10 @@ class Tablero_Galton:
         crear = Crear_arbol(self.niveles)
         crear.construir_arbol()
         self.arbol = crear.lista_arbol
-        #crear.imprimir_arbol()
         #RUTAS
         construir_rutas = Crear_rutas(self.tama,self.niveles-1)
         construir_rutas.construir_rutas()
         self.rutas = construir_rutas.lista_rutas
-
 
 
     def simular_recorridos(self):
@@ -37,13 +35,12 @@ class Tablero_Galton:
         self.resultados_recorridos = recorrido.resultados
 
 
-    def sacar_probabilidades(self):
+    def sacar_probabilidades(self,tipo =0):
         proba = Probabilidades(self.resultados_recorridos,self.niveles)
         #Aqui se hace el ajusta para sacar las probabilidades en decimales o acululados
         #proba.sacar_probabilidades()
         proba.sacar_probabilidades_2()
         self.resultados_probabilidades = proba.resultados
-
 
 
     def imprimir_resultados(self):
@@ -53,10 +50,4 @@ class Tablero_Galton:
         print("Resultados de las rutas: ",self.resultados_recorridos)
         print("Probabilidades: ",self.resultados_probabilidades)
 
-
-#prueba_10 = Tablero_galuar(100)
-#prueba_10.construir_tablero_rutas()
-#prueba_10.simular_recorridos()
-#prueba_10.sacar_probabilidades()
-#prueba_10.imprimir_resultados()
 

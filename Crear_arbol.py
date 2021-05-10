@@ -1,7 +1,7 @@
 class Crear_arbol:
 
-    #este metodo crea el arbol segun el numero de niveles que
-    # se pasan como parametro por el contructor de la clase
+    '''Este metodo crea el arbol segun el numero de niveles que se
+    pasan como parametro por el contructor de la clase  '''
     def __init__(self,niveles):
         self.niveles = niveles
         self.lista_arbol = []
@@ -9,7 +9,7 @@ class Crear_arbol:
 
     #se construye el arbol simuladolo en una lista
     def construir_arbol(self):
-        #contador = 1
+
         for i in range(1,self.niveles+1):
             j = 0
             a= 0
@@ -32,8 +32,3 @@ class Crear_arbol:
             print(i)
         #    print(len(i))
 
-
-
-#prueba2 = Crear_arbol(7)
-#prueba2.construir_arbol()
-#prueba2.imprimir_arbol()

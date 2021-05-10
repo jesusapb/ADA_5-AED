@@ -1,6 +1,6 @@
 from Recorrer_Arbol import *
 
-'''Esta clase toma la lista de rutas y el ambol para sacar los resultados '''
+'''Esta clase toma la lista de rutas y el arbol para sacar los resultados '''
 class Hacer_recorridos:
 
     def __init__(self,lista_rutas,arbol):

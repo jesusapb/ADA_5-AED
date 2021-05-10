@@ -1,11 +1,11 @@
 import random
 
 '''Esta clase construye las rutas que seguiran las pelotas cuando caigan por el arbol(tablero)'''
-class Cadena:
+class Ruta:
     #Al constructor se le pasa el la longitud de la cadena
     def __init__(self,longitud):
         self.longitud = longitud
-        self.cadena = []
+        self.ruta = []
 
 
     # se genera un numero aleatorio y si esta en un rango adecuado es 0 o es 1 segun corresponda
@@ -23,13 +23,13 @@ class Cadena:
         i = 0
         while i < self.longitud:
             bit = self.numero_aleatorio()
-            self.cadena.append(bit)
+            self.ruta.append(bit)
             i = i + 1
 
 
     #Metodo para pruebas locales, No USAR en el programa global
     def imprimir_cadena(self):
-        print(self.cadena)
+        print(self.ruta)
 
 
 

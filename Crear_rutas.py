@@ -1,5 +1,5 @@
 #import random
-from Cadena import *
+from Ruta import *
 
 '''En esta clase se crea la lista de rutas que pueden seguir las pelotitas'''
 class Crear_rutas:
@@ -13,9 +13,9 @@ class Crear_rutas:
     #se construye una lista de listas de las rutas que puede tomar
     def construir_rutas(self):
         for i in range(self.tama):
-            individuo = Cadena(self.longitud)
+            individuo = Ruta(self.longitud)
             individuo.construir()
-            self.lista_rutas.append(individuo.cadena)
+            self.lista_rutas.append(individuo.ruta)
 
 
     # Metodo para pruebas locales, No USAR en el programa global

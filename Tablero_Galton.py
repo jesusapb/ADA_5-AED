@@ -38,9 +38,13 @@ class Tablero_Galton:
     def sacar_probabilidades(self,tipo =0):
         proba = Probabilidades(self.resultados_recorridos,self.niveles)
         #Aqui se hace el ajusta para sacar las probabilidades en decimales o acululados
-        #proba.sacar_probabilidades()
-        proba.sacar_probabilidades_2()
-        self.resultados_probabilidades = proba.resultados
+        if tipo ==0:
+            proba.sacar_probabilidades_2()
+            self.resultados_probabilidades = proba.resultados
+        else:
+            proba.sacar_probabilidades()
+            self.resultados_probabilidades = proba.resultados
+
 
 
     def imprimir_resultados(self):
